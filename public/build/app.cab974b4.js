@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[143],{177:()=>{document.getElementById("menutoggle").addEventListener("click",(function(){document.getElementById("mobilemenu").classList.toggle("hidden")}))}},e=>{var t;t=177,e(e.s=t)}]);

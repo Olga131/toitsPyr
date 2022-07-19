@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos réalisations – Toits Pyrènèens{% endblock %}
+
+{% block extendNav %}
+    <section class="container" id="header_text_and_vector">
+        <div class="row">
+            <div class="col-sm-8 col-12">
+                <h1>
+                    <span>T</span><span>O</span><span>I</span><span>T</span><span>S</span>&nbsp;<span>P</span><span>Y</span><span>R</span><span>É</span><span>N</span><span>É</span><span>E</span><span>N</span><span>S</span>
+                </h1>
+                <div class="topLine">
+                    <h3>Rèalisations de nos chantiers
+                    </h3>
+                </div>
+            </div>
+            <div class="col-4 d-md-block d-sm-none d-none">
+                <div class="home_vector"></div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block body %}
+    <!--les icones-->
+    {% include 'partials/icones.html.twig' %}
+
+    <div style="margin-top: 25px">&nbsp;</div>
+
+    {% for cat in categories %}
+        {% include 'nos_realisations/categorie.html.twig' with {articles: cat.articles, titre: cat.titre} %}
+    {% endfor %}
+{% endblock %}
